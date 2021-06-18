@@ -15,8 +15,8 @@
 body {
     text-align: center;
     background-repeat: no-repeat;
-    background-size: 30%;
-    background-position: center;
+    background-size: 100%;
+    background-position: bottom;
     background-image: url(img/background.png);
 }
 
