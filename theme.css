@@ -414,7 +414,7 @@ span {
 @keyframes search-bar{
     0% {max-width: 150px;}
     100% {max-width: 400px;}}
-    <style><script>document.title = "永远相信美好的事情即将发生";</script></style>
+    <script>document.title = "永远相信美好的事情即将发生";</script>
     body {
         background-position:top center;
         background-size:100%;
