@@ -12,8 +12,9 @@ body{
     height: 100%;
     width: 100%;
     background-color: #efeeee;
-	scrollbar-width: 0px;
-	overflow: hidden;
+    scrollbar-width: 0px;
+    overflow: hidden;
+    position:fixed;
 }
 
 .container_content{
