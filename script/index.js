@@ -20,22 +20,22 @@ function opensearchbarlist() {
   document.getElementById("searchbarlist").style.display="block";
 }
 function searchbar_google() {
-  document.getElementById("searchbaricon").src='/img/google.png';
+  document.getElementById("searchbaricon").src='/blob/main/img/google.png';
   document.getElementById("searchbarlist").style.display="none";
   searchengiecurrent="google";
 }
 function searchbar_bing() {
-  document.getElementById("searchbaricon").src='/img/bing.png';
+  document.getElementById("searchbaricon").src='/blob/main/img/bing.png';
   document.getElementById("searchbarlist").style.display="none";
   searchengiecurrent="bing";
 }
 function searchbar_baidu() {
-  document.getElementById("searchbaricon").src='/img/baidu.png';
+  document.getElementById("searchbaricon").src='/blob/main/img/baidu.png';
   document.getElementById("searchbarlist").style.display="none";
   searchengiecurrent="baidu";
 }
 function searchbar_duckgo() {
-  document.getElementById("searchbaricon").src='/img/duckgo.png';
+  document.getElementById("searchbaricon").src='/blob/main/img/duckgo.png';
   document.getElementById("searchbarlist").style.display="none";
   searchengiecurrent="duckgo";
 }
