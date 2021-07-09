@@ -266,6 +266,7 @@ body{
   }
 .searchbar {
     margin: 0 auto;
+    margin-left: 40px;
 }
   .searchbar form  {
 	position: relative;
