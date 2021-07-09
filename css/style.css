@@ -99,6 +99,7 @@ body{
 	height: 100vh;
 	background-color: #20222a;
 	transition: all 0.5s;
+	z-index: 2;
 }
 .navbar ul li {
 	width: 100%;
@@ -268,7 +269,7 @@ body{
 	width: 300px;
 	margin: 0 auto;
 	margin-top: 100px;
-	margin-left: 490px;
+	margin-left: 25%;
 	margin-bottom: 100px;
   }
   
