@@ -75,6 +75,7 @@ body{
 	line-height: 40px;
 	background-color: #fff;
 	box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+	margin: 0 auto;
 }
 .navbar input {
 	display: none;
@@ -166,7 +167,7 @@ body{
 .logobox{
 	position: relative;
     width: 400px;
-    margin: auto;
+    margin: 0 auto;
 }
 .clock {
 	display: flex;
@@ -263,7 +264,9 @@ body{
     left: 10px;
     height: 5px;
   }
-
+.searchbar {
+    margin: 0 auto;
+}
   .searchbar form  {
 	position: relative;
 	width: 300px;
