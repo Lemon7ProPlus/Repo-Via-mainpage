@@ -1,65 +1,203 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="zh-CN">
+
 <head>
-<meta content="en-us" http-equiv="Content-Language" />
-<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" type="text/css" href="theme.css" />
-<script type="text/javascript" src="script.js" ></script>
-<title>今天又是美好的一天</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> Main Page </title>
+    <link rel="stylesheet" href="css/font-awesome.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script type="text/javascript" src="script/index.js"></script>
 </head>
 
-
 <body>
+    <div>
+		<div class="navbar">
+			<input type="checkbox" id="checkbox" checked/>
+			<label for="checkbox">
+				<i class="fa fa-outdent fa-flip-horizontal"></i>
+			</label>
+			<ul>
+				<li>
+					<span>哔哩哔哩</span>
+				</li>
+				<li>
+					<a href="javascript:;">
+						<i class="fa fa-home"></i>
+						<span>后台首页</span>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;">
+						<i class="fa fa-sitemap"></i>
+						<span>商品列表</span>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;">
+						<i class="fa fa-user"></i>
+						<span>用户列表</span>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;">
+						<i class="fa fa-shopping-cart"></i>
+						<span>订单列表</span>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;">
+						<i class="fa fa-windows"></i>
+						<span>功能列表</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+        <div class="logobox">
+            <div class="weatherbox">
+                <iframe width="232" 
+                scrolling="no" 
+                height="80" 
+                frameborder="0" 
+                allowtransparency="true" 
+                src="https://i.tianqi.com?c=code&id=8&icon=1&site=12">
+            </iframe>
+            </div>
+            <div class="clock">
+                <div class="digit hours">
+                    <div class="segment"></div>
+                    <div class="segment"></div>
+                    <div class="segment"></div>
+                    <div class="segment"></div>
+                    <div class="segment"></div>
+                    <div class="segment"></div>
+                    <div class="segment"></div>
+                </div>
+        
+                <div class="digit hours">
+                    <div class="segment"></div>
+                    <div class="segment"></div>
+                    <div class="segment"></div>
+                    <div class="segment"></div>
+                    <div class="segment"></div>
+                    <div class="segment"></div>
+                    <div class="segment"></div>
+                </div>
+        
+        
+                <div>
+                    <div class="separator"></div>
+                    <div class="separator"></div>
+                </div>
+        
+                <div class="digit minutes">
+                    <div class="segment"></div>
+                    <div class="segment"></div>
+                    <div class="segment"></div>
+                    <div class="segment"></div>
+                    <div class="segment"></div>
+                    <div class="segment"></div>
+                    <div class="segment"></div>
+                </div>
+        
+                <div class="digit minutes">
+                    <div class="segment"></div>
+                    <div class="segment"></div>
+                    <div class="segment"></div>
+                    <div class="segment"></div>
+                    <div class="segment"></div>
+                    <div class="segment"></div>
+                    <div class="segment"></div>
+                </div>
+        
+                <div>
+                    <div class="separator"></div>
+                    <div class="separator"></div>
+                </div>
+        
+                <div class="digit seconds">
+                    <div class="segment"></div>
+                    <div class="segment"></div>
+                    <div class="segment"></div>
+                    <div class="segment"></div>
+                    <div class="segment"></div>
+                    <div class="segment"></div>
+                    <div class="segment"></div>
+                </div>
+        
+                <div class="digit seconds">
+                    <div class="segment"></div>
+                    <div class="segment"></div>
+                    <div class="segment"></div>
+                    <div class="segment"></div>
+                    <div class="segment"></div>
+                    <div class="segment"></div>
+                    <div class="segment"></div>
+                </div>
+            </div>
+        </div>
+        <div class="searchbar">
+            <form>
+                <ul class="searchbarlistmenu">
+                    <li>
+                        <div onclick="opensearchbarlist()">
+                            <img id="searchbaricon" src="/img/google.png" height="28px" width="28px">
+                        </div>
+                        <ul id="searchbarlist">
+                            <a href="#" onclick="searchbar_google()"><li><img src="/img/google.png" height="12px" width="12px" style="margin-right: 5px;">Google</li></a>
+                            <a href="#" onclick="searchbar_bing()"><li ><img src="/img/bing.png" height="12px" width="12px" style="margin-right: 5px;">Bing</li></a>
+                            <a href="#" onclick="searchbar_baidu()"><li><img src="/img/baidu.png" height="12px" width="12px" style="margin-right: 5px;">Baidu</li></a>
+                            <a href="#" onclick="searchbar_duckgo()"><li><img src="/img/duckgo.png" height="12px" width="12px" style="margin-right: 5px;">Duckgo</li></a>
+                        </ul>
+                    </li>
+                </ul>
+                <div>
+                    <input type="search" id="searchcontent" placeholder="请输入您要搜索的内容...">
+                    <button type="button" onclick="searchto()"></button>
+                </div>
     
-    <div id="content">
-        <br />
-    <div id ='time'></div>
-        <br />
-    <form onsubmit="return search()" class="search_bar2">
-        <input type="submit" id="search_submit" value="🔍" >
-        <span><input class="search" type="text" value="" autocomplete="off" id="search_input" ></span>
-    </form>
-        <br />
-
-<div class="box">
-<a href="v://history"></a>
-<p><img class="icon" src="img/历史.png" ></p>
-<p class="url">历史</p>
-</div>
-
-<div class="box">
-<a href="https://m.seniverse.com/weather/WEBTFUSKS7HB?source=widget_old"></a>
-<p><img class="icon" src="img/天气.png" ></p>
-<p class="url">天气</p>
-</div>
-
-<div class="box">
-<a href="http://www.bing.com/translator/?"></a>
-<p><img class="icon" src="img/翻译.png" ></p>
-<p class="url">翻译</p>
-</div>
-
-<div class="box">
-<a href="https://viayoo.com/tools/ua.html"></a>
-<p><img class="icon" src="img/UA.png" ></p>
-<p class="url">UA查询</p>
-</div>
-
-<!--
-如若要添加可复制一段
-<div class="box">
-<a href="地址"></a>
-<p><img class="icon" src="img/icon6.png" ></p>
-<p class="url">书签名称</p>
-</div>
-其中链接在href中如href="地址"建议填写folder://自己创建的文件夹地址，这样创建一次不必再修改
-图标文件放置在img文件夹中定义如src="img/icon6.png"
-显示的标题在<p class="url">书签名称</p>之间定义如<p class="url">酷安</p>
--->
-
-</div>
-
-
+            </form>
+        </div>
+        <div class="container_content">
+            <a class="box" href="v://history">
+                <div class="img"><img src="img/history.png"></div>
+                <p>历史</p>
+            </a>
+            <a class="box" href="https://m.seniverse.com/weather/WEBTFUSKS7HB?source=widget_old
+        ">
+                <div class="img"><img src="img/weather.png" alt="" /></div>
+                <p>天气</p>
+            </a>
+            <a class="box" href="https://app-onedrive.herokuapp.com">
+                <div class="img"><img src="img/cloud.png"></div>
+                <p>云盘</p>
+            </a>
+            <a class="box" href="https://viayoo.com/tools/ua.html">
+                <div class="img"><img src="img/ua.png" alt="" /></div>
+                <p>UA</p>
+            </a>
+            <a class="box" href="Link">
+                <div class="img"><img src="img/none.png" alt="" /></div>
+                <p>Name</p>
+            </a>
+            <a class="box" href="Link">
+                <div class="img"><img src="img/none.png" alt="" /></div>
+                <p>Name</p>
+            </a>
+            <a class="box" href="Link">
+                <div class="img"><img src="img/none.png" alt="" /></div>
+                <p>Name</p>
+            </a>
+            <a class="box" href="Link">
+                <div class="img"><img src="img/none.png" alt="" /></div>
+                <p>Name</p>
+            </a>
+            <!-- <a class="box" href="Link">
+            <div class="img"><img src="img/none.png" alt="" /></div>
+            <p>Name</p>
+            </a> -->
+        </div>
+    </div>
 </body>
+
 </html>
