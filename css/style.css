@@ -6,25 +6,25 @@
 }
 
 body{
-    /* display: flex;  */
+    display: block; 
     justify-content: center; 
     align-items: center;
     height: 100%;
     width: 100%;
     background-color: #efeeee;
-    scrollbar-width: 0px;
-    overflow: hidden;
-    position:fixed;
+	overflow: hidden;
+	position: fixed;
 }
 
 .container_content{
-    display: flex;
+    display:flex;
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
     width: 400px;
     height: 100px;
-    margin: 0 auto;
+    margin:0px auto;
+	margin-top: -50px;
 }
 .container_content a{
 	text-decoration: none;
@@ -69,13 +69,15 @@ body{
 
 
 .navbar {
-	position: relative;
+	position: fixed;
 	width: 100%;
 	height: 40px;
 	line-height: 40px;
-	background-color: #fff;
-	box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
-	margin: 0 auto;
+	/* background-color: #fff; */
+	/* box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1); */
+	margin: 0px auto;
+	bottom: 0;
+	z-index: 2;
 }
 .navbar input {
 	display: none;
@@ -93,14 +95,13 @@ body{
 }
 .navbar ul {
 	position: absolute;
-	top: 0;
+	bottom: 0;
 	right: -20px;
 	width: 200px;
 	/* 高度占浏览器可视区域的高度 */
 	height: 100vh;
 	background-color: #20222a;
 	transition: all 0.5s;
-	z-index: 2;
 }
 .navbar ul li {
 	width: 100%;
@@ -167,14 +168,13 @@ body{
 .logobox{
 	position: relative;
     width: 400px;
-    margin: 0 auto;
+    margin: 0px auto;
 }
 .clock {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	margin-top: 50px;
-	margin-bottom: 40px;
+	margin-top: 40px;
   }
   
   .digit {
@@ -264,15 +264,22 @@ body{
     left: 10px;
     height: 5px;
   }
+
+
 .searchbar {
-    margin: 0 auto;
-    margin-left: 40px;
+	margin: 0px auto;
+	margin-left: 40px;
+	margin-top: -50px;
 }
-  .searchbar form  {
+.searchblock{
+	display: flex;
+}
+  .searchbar form {
 	position: relative;
 	width: 300px;
 	margin: 0 auto;
 	margin-top: 100px;
+	/* margin-left: 25%; */
 	margin-bottom: 100px;
   }
   
@@ -293,6 +300,14 @@ body{
 	width: 42px;
 	cursor: pointer;
 	position: absolute;
+  }
+  .searchbtn {
+	height: 42px;
+	width: fit-content;
+	cursor: pointer;
+	right: -10px;
+	position: absolute;
+	color: #7BA7AB;
   }
   
   .searchbar input {
