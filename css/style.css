@@ -394,7 +394,7 @@ body{
   
   .searchbarlistmenu li ul{
 	position: fixed;
-	/* display: none; */
+	display: none;
 	background: #7ba7abda;
 	border-radius: 5px;
 	width: 120px;
