@@ -13,7 +13,7 @@ body{
     align-items: center;
     height: 100%;
     width: 100%;
-    background-color: #efeeee;
+    /* background-color: #efeeee; */
 	overflow: hidden;
 	position: fixed;
 	background-image: url(https://lemon7proplus.github.io/Via/img/bg.png);
