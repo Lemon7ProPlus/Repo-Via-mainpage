@@ -4,7 +4,9 @@
 	margin: 0;
 	box-sizing: border-box;
 }
-
+html{
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
 body{
     display: block; 
     justify-content: center; 
