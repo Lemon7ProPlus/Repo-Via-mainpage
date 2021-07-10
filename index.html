@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title> Main Page </title>
+    <title> 今天又是充满希望的一天 </title>
     <link rel="stylesheet" href="css/font-awesome.css" />
     <link rel="stylesheet" href="css/style.css" />
     <script type="text/javascript" src="script/index.js"></script>
@@ -14,17 +14,17 @@
     <div>
 		<div class="navbar">
 			<input type="checkbox" id="checkbox" checked/>
-			<label for="checkbox">
-				<i class="fa fa-outdent fa-flip-horizontal"></i>
+			<label for="checkbox" id="navbarbtn">
+				<i id="navbaricon" class="fa fa-outdent fa-flip-horizontal"></i>
 			</label>
 			<ul>
 				<li>
-					<span>哔哩哔哩</span>
+					<span>Navigation</span>
 				</li>
 				<li>
-					<a href="javascript:;">
-						<i class="fa fa-home"></i>
-						<span>后台首页</span>
+					<a href="https://app-onedrive.herokuapp.com">
+						<i class="fa fa-cloud"></i>
+						<span>网络存储</span>
 					</a>
 				</li>
 				<li>
@@ -46,10 +46,22 @@
 					</a>
 				</li>
 				<li>
-					<a href="javascript:;">
-						<i class="fa fa-windows"></i>
-						<span>功能列表</span>
+					<a href="https://github.com/Lemon7ProPlus/Via">
+						<i class="fa fa-code"></i>
+						<span>源码地址</span>
 					</a>
+				</li>
+                <li>
+					<a href="#" onclick="whatBrowser()">
+						<i class="fa fa-edge"></i>
+						<span>浏览标识</span>
+					</a>
+				</li>
+
+                <li>
+                    <label for="checkbox">
+                        <i class="fa fa-outdent fa-flip-horizontal"></i>
+                    </label>
 				</li>
 			</ul>
 		</div>
@@ -144,10 +156,10 @@
                             <img id="searchbaricon" src="/Via/img/google.png" height="28px" width="28px">
                         </div>
                         <ul id="searchbarlist">
-                            <a href="#" onclick="searchbar_google()"><li><img src="/Via/img/google.png" height="12px" width="12px" style="margin-right: 5px;">Google</li></a>
-                            <a href="#" onclick="searchbar_bing()"><li ><img src=/Via"/img/bing.png" height="12px" width="12px" style="margin-right: 5px;">Bing</li></a>
-                            <a href="#" onclick="searchbar_baidu()"><li><img src="/Via/img/baidu.png" height="12px" width="12px" style="margin-right: 5px;">Baidu</li></a>
-                            <a href="#" onclick="searchbar_duckgo()"><li><img src="/Via/img/duckgo.png" height="12px" width="12px" style="margin-right: 5px;">Duckgo</li></a>
+                            <a href="#" onclick="searchbar_google()"><li><img src="/Via/img/google.png" height="20px" width="20px" style="margin-right: 5px; margin-top: 5px;" >Google</li></a>
+                            <a href="#" onclick="searchbar_bing()"><li ><img src="/Via/img/bing.png" height="20px" width="20px" style="margin-right: 5px; margin-top: 5px;">Bing</li></a>
+                            <a href="#" onclick="searchbar_baidu()"><li><img src="/Via/img/baidu.png" height="20px" width="20px" style="margin-right: 5px; margin-top: 5px;">Baidu</li></a>
+                            <a href="#" onclick="searchbar_duckgo()"><li><img src="/Via/img/duckgo.png" height="20px" width="20px" style="margin-right: 5px; margin-top: 5px;">Duckgo</li></a>
                         </ul>
                     </li>
                 </ul>
