@@ -10,10 +10,17 @@ function closeNav() {
     document.getElementById("navSidebar").style.width = "0";
 }
 function whatBrowser() {
-    // document.Browser.Name.value = navigator.appName;
-    // document.Browser.Version.value = navigator.appVersion;
-    // document.Browser.Code.value = navigator.appCodeName;
-    document.Browser.Agent.value = navigator.userAgent;
+    var Name = navigator.appName; 
+    var Version = navigator.appVersion; 
+    var Code = navigator.appCodeName; 
+    var Agent = navigator.userAgent; 
+    var newwindow = window.open();
+    newwindow.document.write('<html><head><title>User Agent</title></head>');
+    newwindow.document.write('<body><tr><td> appName: </td><td> ');
+    newwindow.document.write(Name+'</br></td></tr><tr><td> appVersion:</td><td>');
+    newwindow.document.write(Version+'</br></td></tr><tr><td> appCodeName: </td><td></td>');
+    newwindow.document.write(Code+'</br></td></tr><tr><td> userAgent:</td><td></td>');
+    newwindow.document.write(Agent+'</br></td></tr></body></html>');
 }
 
 function opensearchbarlist() {
@@ -33,6 +40,8 @@ document.addEventListener('click', (e)=> {
   var searchlistId = document.getElementById("searchbarlist");
   var searchiconId= document.getElementById("searchbaricon");
   var listid = document.getElementById("searchbarlist");
+  var sidebarbtn = document.getElementById("checkbox");
+  // alert(currentId.id);
   if ( (currentId.id != "searchbaricon") || (currentId.id != "searchbarlist")) {
     searchlistId.style.display = 'none';
   } 
@@ -43,6 +52,11 @@ document.addEventListener('click', (e)=> {
     else {
       listid.style.display = "block";
     }
+  }
+  if (sidebarbtn.checked == true && (currentId.id == "navbarbtn" || currentId.id == "checkbox" || currentId.id == "navbaricon")){
+    sidebarbtn.checked = false;
+  } else {
+    sidebarbtn.checked = true;
   }
 })
 
