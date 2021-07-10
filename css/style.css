@@ -19,7 +19,8 @@ body{
 	background-image: url(https://lemon7proplus.github.io/Via/img/bg.png);
 	background-position:  center;
 	background-size: cover;
-	background-position-y: -600px;
+	background-repeat: no-repeat;
+	background-position-y: -800px;
 }
 
 .container_content{
