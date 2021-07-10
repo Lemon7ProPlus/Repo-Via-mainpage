@@ -17,47 +17,84 @@ function whatBrowser() {
 }
 
 function opensearchbarlist() {
-  document.getElementById("searchbarlist").style.display="block";
+  // var listid = document.getElementById("searchbarlist").style.display="block";
+  var listid = document.getElementById("searchbarlist");
+  if (listid.style.display == "block"){
+    listid.style.display = "none";
+  }
+  else {
+    listid.style.display = "block";
+  }
 }
+
+document.addEventListener('click', (e)=> {
+  // var currentId = e.target.getAttribute('id');
+  var currentId = e.target;
+  var searchlistId = document.getElementById("searchbarlist");
+  var searchiconId= document.getElementById("searchbaricon");
+  var listid = document.getElementById("searchbarlist");
+  if ( (currentId.id != "searchbaricon") || (currentId.id != "searchbarlist")) {
+    searchlistId.style.display = 'none';
+  } 
+  if (currentId.id == 'searchbaricon'){
+    if (listid.style.display == "block"){
+      listid.style.display = "none";
+    }
+    else {
+      listid.style.display = "block";
+    }
+  }
+})
+
+
 function searchbar_google() {
-  document.getElementById("searchbaricon").src='/Via/img/google.png';
+  document.getElementById("searchbaricon").src='/img/google.png';
   document.getElementById("searchbarlist").style.display="none";
+  document.getElementById("searchbarform").action = "https://www.google.com/search";
+  document.getElementById("searchcontent").name = "q";
   searchengiecurrent="google";
 }
 function searchbar_bing() {
-  document.getElementById("searchbaricon").src='/Via/img/bing.png';
+  document.getElementById("searchbaricon").src='/img/bing.png';
   document.getElementById("searchbarlist").style.display="none";
+  document.getElementById("searchbarform").action = "https://www.bing.com/search";
+  document.getElementById("searchcontent").name = "q";
   searchengiecurrent="bing";
 }
 function searchbar_baidu() {
-  document.getElementById("searchbaricon").src='/Via/img/baidu.png';
+  document.getElementById("searchbaricon").src='/img/baidu.png';
   document.getElementById("searchbarlist").style.display="none";
+  document.getElementById("searchbarform").action = "https://www.baidu.com/s";
+  document.getElementById("searchcontent").name = "wd";
   searchengiecurrent="baidu";
 }
 function searchbar_duckgo() {
-  document.getElementById("searchbaricon").src='/Via/img/duckgo.png';
+  document.getElementById("searchbaricon").src='/img/duckgo.png';
   document.getElementById("searchbarlist").style.display="none";
+  document.getElementById("searchbarform").action = "https://duckduckgo.com/";
+  document.getElementById("searchcontent").name = "q";
   searchengiecurrent="duckgo";
 }
 
-function searchto(){
-  var searchValue = document.getElementById("searchcontent").value;
-    switch (searchengiecurrent) {
-      case "google":
-        window.location.href="https://www.google.com/search?q="+searchValue;
-        break;
-      case "bing":
-        window.location.href="https://www.bing.com/search?q="+searchValue;
-      case "baidu":
-        window.location.href="https://www.baidu.com/s?wd="+searchValue;
-      case "duckgo":
-        window.location.href="https://duckduckgo.com/?q="+searchValue;
-      default:
-        break;
-    }
+// function searchto(){
+//   var searchValue = document.getElementById("searchcontent").value;
+//   var formstate = document.getElementById("searchbarform");
+//     switch (searchengiecurrent) {
+//       case "google":
+//         window.location.href="https://www.google.com/search?q="+searchValue;
+//         break;
+//       case "bing":
+//         window.location.href="https://www.bing.com/search?q="+searchValue;
+//       case "baidu":
+//         window.location.href="https://www.baidu.com/s?wd="+searchValue;
+//       case "duckgo":
+//         window.location.href="https://duckduckgo.com/?q="+searchValue;
+//       default:
+//         break;
+//     }
 
+// }
 
-}
 
 var digitSegments = [
     [1,2,3,4,5,6],
