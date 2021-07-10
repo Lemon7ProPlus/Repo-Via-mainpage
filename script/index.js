@@ -62,28 +62,28 @@ document.addEventListener('click', (e)=> {
 
 
 function searchbar_google() {
-  document.getElementById("searchbaricon").src='/img/google.png';
+  document.getElementById("searchbaricon").src='/Via/img/google.png';
   document.getElementById("searchbarlist").style.display="none";
   document.getElementById("searchbarform").action = "https://www.google.com/search";
   document.getElementById("searchcontent").name = "q";
   searchengiecurrent="google";
 }
 function searchbar_bing() {
-  document.getElementById("searchbaricon").src='/img/bing.png';
+  document.getElementById("searchbaricon").src='/Via/img/bing.png';
   document.getElementById("searchbarlist").style.display="none";
   document.getElementById("searchbarform").action = "https://www.bing.com/search";
   document.getElementById("searchcontent").name = "q";
   searchengiecurrent="bing";
 }
 function searchbar_baidu() {
-  document.getElementById("searchbaricon").src='/img/baidu.png';
+  document.getElementById("searchbaricon").src='/Via/img/baidu.png';
   document.getElementById("searchbarlist").style.display="none";
   document.getElementById("searchbarform").action = "https://www.baidu.com/s";
   document.getElementById("searchcontent").name = "wd";
   searchengiecurrent="baidu";
 }
 function searchbar_duckgo() {
-  document.getElementById("searchbaricon").src='/img/duckgo.png';
+  document.getElementById("searchbaricon").src='/Via/img/duckgo.png';
   document.getElementById("searchbarlist").style.display="none";
   document.getElementById("searchbarform").action = "https://duckduckgo.com/";
   document.getElementById("searchcontent").name = "q";
