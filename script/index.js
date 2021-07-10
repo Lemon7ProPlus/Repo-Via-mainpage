@@ -16,7 +16,7 @@ function whatBrowser() {
     var Agent = navigator.userAgent; 
     var newwindow = window.open();
     newwindow.document.write('<html><head><title>User Agent</title></head>');
-    newwindow.document.write('<body style="width: 100%; font-size:40px;"><tr><td> appName: </td><td> ');
+    newwindow.document.write('<body style="width: 100%; font-size:40px; margin: 40px"><h1>浏览器标识(UserAgent)</h1><tr><td> appName: </td><td> ');
     newwindow.document.write(Name+'</br></br></td></tr><tr><td> appVersion:</td><td>');
     newwindow.document.write(Version+'</br></br></td></tr><tr><td> appCodeName: </td><td></td>');
     newwindow.document.write(Code+'</br></br></td></tr><tr><td> userAgent:</td><td></td>');
@@ -62,28 +62,28 @@ document.addEventListener('click', (e)=> {
 
 
 function searchbar_google() {
-  document.getElementById("searchbaricon").src='/Via/img/google.png';
+  document.getElementById("searchbaricon").src='/img/google.png';
   document.getElementById("searchbarlist").style.display="none";
   document.getElementById("searchbarform").action = "https://www.google.com/search";
   document.getElementById("searchcontent").name = "q";
   searchengiecurrent="google";
 }
 function searchbar_bing() {
-  document.getElementById("searchbaricon").src='/Via/img/bing.png';
+  document.getElementById("searchbaricon").src='/img/bing.png';
   document.getElementById("searchbarlist").style.display="none";
   document.getElementById("searchbarform").action = "https://www.bing.com/search";
   document.getElementById("searchcontent").name = "q";
   searchengiecurrent="bing";
 }
 function searchbar_baidu() {
-  document.getElementById("searchbaricon").src='/Via/img/baidu.png';
+  document.getElementById("searchbaricon").src='/img/baidu.png';
   document.getElementById("searchbarlist").style.display="none";
   document.getElementById("searchbarform").action = "https://www.baidu.com/s";
   document.getElementById("searchcontent").name = "wd";
   searchengiecurrent="baidu";
 }
 function searchbar_duckgo() {
-  document.getElementById("searchbaricon").src='/Via/img/duckgo.png';
+  document.getElementById("searchbaricon").src='/img/duckgo.png';
   document.getElementById("searchbarlist").style.display="none";
   document.getElementById("searchbarform").action = "https://duckduckgo.com/";
   document.getElementById("searchcontent").name = "q";
