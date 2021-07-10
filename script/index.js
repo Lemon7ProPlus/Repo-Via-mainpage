@@ -16,7 +16,7 @@ function whatBrowser() {
     var Agent = navigator.userAgent; 
     var newwindow = window.open();
     newwindow.document.write('<html><head><title>User Agent</title></head>');
-    newwindow.document.write('<body style="width: 400px; font-size:20px;"><tr><td> appName: </td><td> ');
+    newwindow.document.write('<body style="width: 400px; font-size:40px;"><tr><td> appName: </td><td> ');
     newwindow.document.write(Name+'</br></br></td></tr><tr><td> appVersion:</td><td>');
     newwindow.document.write(Version+'</br></br></td></tr><tr><td> appCodeName: </td><td></td>');
     newwindow.document.write(Code+'</br></br></td></tr><tr><td> userAgent:</td><td></td>');
